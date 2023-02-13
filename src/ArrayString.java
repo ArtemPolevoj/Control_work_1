@@ -12,4 +12,20 @@ public class ArrayString {
         }
     return inpurArray;
     }
+
+    public  static String[] getArrayStringsGivenLength(String[] inputArray, int stringLength){
+        int countr = 0;
+        for (String s: inputArray){
+            if (s.length() <= stringLength & !s.equals("")){
+                countr++;
+            }
+        }
+        String[] outArray = new String[countr];
+        for (int i = 0,j = 0; i <inputArray.length; i++)
+            if (inputArray[i].length() <= stringLength & !inputArray[i].equals("")){
+                outArray[j] = inputArray[i];
+                j++;
+            }
+        return  outArray;
+    }
 }
